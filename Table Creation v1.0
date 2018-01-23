@@ -1,0 +1,48 @@
+drop table Parking;
+drop table Vehicle;
+drop table ParkingLot;
+drop table User;
+   
+Create Table User(
+UserID int(6) not null auto_increment,
+FirstName varchar(30) not null,
+LastName varchar(30) not null,
+Role int(1) not null,
+GlobalID VarChar(8) not null,
+Email Varchar(60),
+PhoneNumber char(12),
+Password varchar(30),
+constraint UserPK primary key (UserID));
+
+Create Table ParkingLot(
+ParkingLotID Int(2) not null auto_increment,
+ParkingLotName varchar(30),
+StreetAddress varchar(30) not null,
+Capacity int(3) not null,
+Price decimal(4,2) not null,
+BillStartTime Int(6) not null,
+BillEndTime int(6) not null,
+24HourCharge char(1),
+DisableTicketing char(1),
+constraint ParkingLotPK primary key (ParkingLotID));
+
+create table Vehicle(
+VehicleID Int(6) not null auto_increment,
+Make Varchar(20) not null,
+Model Varchar(20) not null,
+Year int(4) not null,
+Color varchar(15) not null,
+LicensePlate varchar(10),
+UserID int(6),
+constraint VehiclePK primary key (VehicleID),
+constraint VehicleFK foreign key (UserID) references USer(UserID));
+
+create table Parking(
+ParkingID int(12) not null auto_increment,
+ParkingLotID int(2) not null,
+UserID int(6) not null,
+CheckInTime double not null,
+CheckOutTime double not null,
+constraint ParkingPK primary key (ParkingID),
+constraint ParkingFK1 foreign key (ParkingLotID) references ParkingLot(ParkingLotID),
+constraint ParkingFK2 foreign key (UserID) references User(UserID));
