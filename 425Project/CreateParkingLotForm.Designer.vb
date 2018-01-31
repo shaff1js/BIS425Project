@@ -37,8 +37,8 @@ Partial Class CreateParkingLotForm
         Me.ParkingLotIDMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
         Me.CapacityMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
         Me.PriceMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
-        Me.MaskedTextBox4 = New System.Windows.Forms.MaskedTextBox()
-        Me.MaskedTextBox5 = New System.Windows.Forms.MaskedTextBox()
+        Me.BillStartTimeMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
+        Me.BillEndTimeMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
         Me.CreateButton = New System.Windows.Forms.Button()
         Me.ClearButton = New System.Windows.Forms.Button()
         Me.BackButton = New System.Windows.Forms.Button()
@@ -48,6 +48,7 @@ Partial Class CreateParkingLotForm
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.CreateParkingLotToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Test1Label = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -163,6 +164,7 @@ Partial Class CreateParkingLotForm
         Me.CapacityMaskedTextBox.Name = "CapacityMaskedTextBox"
         Me.CapacityMaskedTextBox.Size = New System.Drawing.Size(26, 20)
         Me.CapacityMaskedTextBox.TabIndex = 12
+        Me.CapacityMaskedTextBox.Text = "000"
         Me.CapacityMaskedTextBox.ValidatingType = GetType(Integer)
         '
         'PriceMaskedTextBox
@@ -172,27 +174,30 @@ Partial Class CreateParkingLotForm
         Me.PriceMaskedTextBox.Name = "PriceMaskedTextBox"
         Me.PriceMaskedTextBox.Size = New System.Drawing.Size(36, 20)
         Me.PriceMaskedTextBox.TabIndex = 13
+        Me.PriceMaskedTextBox.Text = "0000"
         Me.PriceMaskedTextBox.ValidatingType = GetType(Integer)
         '
-        'MaskedTextBox4
+        'BillStartTimeMaskedTextBox
         '
-        Me.MaskedTextBox4.Location = New System.Drawing.Point(139, 180)
-        Me.MaskedTextBox4.Mask = "00:00"
-        Me.MaskedTextBox4.Name = "MaskedTextBox4"
-        Me.MaskedTextBox4.Size = New System.Drawing.Size(36, 20)
-        Me.MaskedTextBox4.TabIndex = 14
-        Me.CreateParkingLotToolTip.SetToolTip(Me.MaskedTextBox4, "Please use 24 hour format")
-        Me.MaskedTextBox4.ValidatingType = GetType(Date)
+        Me.BillStartTimeMaskedTextBox.Location = New System.Drawing.Point(139, 180)
+        Me.BillStartTimeMaskedTextBox.Mask = "0000"
+        Me.BillStartTimeMaskedTextBox.Name = "BillStartTimeMaskedTextBox"
+        Me.BillStartTimeMaskedTextBox.Size = New System.Drawing.Size(36, 20)
+        Me.BillStartTimeMaskedTextBox.TabIndex = 14
+        Me.BillStartTimeMaskedTextBox.Text = "0000"
+        Me.CreateParkingLotToolTip.SetToolTip(Me.BillStartTimeMaskedTextBox, "Please use 24 hour format")
+        Me.BillStartTimeMaskedTextBox.ValidatingType = GetType(Date)
         '
-        'MaskedTextBox5
+        'BillEndTimeMaskedTextBox
         '
-        Me.MaskedTextBox5.Location = New System.Drawing.Point(139, 206)
-        Me.MaskedTextBox5.Mask = "00:00"
-        Me.MaskedTextBox5.Name = "MaskedTextBox5"
-        Me.MaskedTextBox5.Size = New System.Drawing.Size(36, 20)
-        Me.MaskedTextBox5.TabIndex = 14
-        Me.CreateParkingLotToolTip.SetToolTip(Me.MaskedTextBox5, "Please use 24 hour format")
-        Me.MaskedTextBox5.ValidatingType = GetType(Date)
+        Me.BillEndTimeMaskedTextBox.Location = New System.Drawing.Point(139, 206)
+        Me.BillEndTimeMaskedTextBox.Mask = "0000"
+        Me.BillEndTimeMaskedTextBox.Name = "BillEndTimeMaskedTextBox"
+        Me.BillEndTimeMaskedTextBox.Size = New System.Drawing.Size(36, 20)
+        Me.BillEndTimeMaskedTextBox.TabIndex = 14
+        Me.BillEndTimeMaskedTextBox.Text = "0000"
+        Me.CreateParkingLotToolTip.SetToolTip(Me.BillEndTimeMaskedTextBox, "Please use 24 hour format")
+        Me.BillEndTimeMaskedTextBox.ValidatingType = GetType(Date)
         '
         'CreateButton
         '
@@ -201,6 +206,7 @@ Partial Class CreateParkingLotForm
         Me.CreateButton.Size = New System.Drawing.Size(102, 40)
         Me.CreateButton.TabIndex = 15
         Me.CreateButton.Text = "Create"
+        Me.CreateParkingLotToolTip.SetToolTip(Me.CreateButton, "Create the Parking Lot")
         Me.CreateButton.UseVisualStyleBackColor = True
         '
         'ClearButton
@@ -271,11 +277,21 @@ Partial Class CreateParkingLotForm
         Me.Label12.TabIndex = 16
         Me.Label12.Text = "*"
         '
+        'Test1Label
+        '
+        Me.Test1Label.AutoSize = True
+        Me.Test1Label.Location = New System.Drawing.Point(236, 186)
+        Me.Test1Label.Name = "Test1Label"
+        Me.Test1Label.Size = New System.Drawing.Size(105, 13)
+        Me.Test1Label.TabIndex = 17
+        Me.Test1Label.Text = "Remove after testing"
+        '
         'CreateParkingLotForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(484, 451)
+        Me.Controls.Add(Me.Test1Label)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
@@ -284,8 +300,8 @@ Partial Class CreateParkingLotForm
         Me.Controls.Add(Me.BackButton)
         Me.Controls.Add(Me.ClearButton)
         Me.Controls.Add(Me.CreateButton)
-        Me.Controls.Add(Me.MaskedTextBox5)
-        Me.Controls.Add(Me.MaskedTextBox4)
+        Me.Controls.Add(Me.BillEndTimeMaskedTextBox)
+        Me.Controls.Add(Me.BillStartTimeMaskedTextBox)
         Me.Controls.Add(Me.PriceMaskedTextBox)
         Me.Controls.Add(Me.CapacityMaskedTextBox)
         Me.Controls.Add(Me.ParkingLotIDMaskedTextBox)
@@ -321,9 +337,9 @@ Partial Class CreateParkingLotForm
     Friend WithEvents ParkingLotIDMaskedTextBox As MaskedTextBox
     Friend WithEvents CapacityMaskedTextBox As MaskedTextBox
     Friend WithEvents PriceMaskedTextBox As MaskedTextBox
-    Friend WithEvents MaskedTextBox4 As MaskedTextBox
+    Friend WithEvents BillStartTimeMaskedTextBox As MaskedTextBox
     Friend WithEvents CreateParkingLotToolTip As ToolTip
-    Friend WithEvents MaskedTextBox5 As MaskedTextBox
+    Friend WithEvents BillEndTimeMaskedTextBox As MaskedTextBox
     Friend WithEvents CreateButton As Button
     Friend WithEvents ClearButton As Button
     Friend WithEvents BackButton As Button
@@ -332,4 +348,5 @@ Partial Class CreateParkingLotForm
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
+    Friend WithEvents Test1Label As Label
 End Class
