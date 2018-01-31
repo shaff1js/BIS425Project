@@ -72,7 +72,19 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateParkingLotForm.Designer.vb">
+      <DependentUpon>CreateParkingLotForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CreateParkingLotForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DBAccessClass.vb" />
+    <Compile Include="EditDisableParkingLotForm.Designer.vb">
+      <DependentUpon>EditDisableParkingLotForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditDisableParkingLotForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LogInForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +109,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CreateParkingLotForm.resx">
+      <DependentUpon>CreateParkingLotForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogInForm.resx">
       <DependentUpon>LogInForm.vb</DependentUpon>
     </EmbeddedResource>
