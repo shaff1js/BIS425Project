@@ -112,6 +112,9 @@
     <EmbeddedResource Include="CreateParkingLotForm.resx">
       <DependentUpon>CreateParkingLotForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditDisableParkingLotForm.resx">
+      <DependentUpon>EditDisableParkingLotForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogInForm.resx">
       <DependentUpon>LogInForm.vb</DependentUpon>
     </EmbeddedResource>
