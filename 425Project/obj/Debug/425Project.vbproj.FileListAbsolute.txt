@@ -23,3 +23,6 @@ C:\Users\shaff1js\Source\Repos\BIS425Project5\425Project\obj\Debug\425Project.ex
 C:\Users\shaff1js\Source\Repos\BIS425Project5\425Project\obj\Debug\425Project.xml
 C:\Users\shaff1js\Source\Repos\BIS425Project5\425Project\obj\Debug\425Project.pdb
 C:\Users\shaff1js\Source\Repos\BIS425Project5\425Project\obj\Debug\425Project.vbprojResolveAssemblyReference.cache
+C:\Users\shaff1js\Source\Repos\BIS425Project\425Project\obj\Debug\425Project.vbprojResolveAssemblyReference.cache
+C:\Users\shaff1js\Source\Repos\BIS425Project\425Project\obj\Debug\_425Project.CreateParkingLotForm.resources
+C:\Users\shaff1js\Source\Repos\BIS425Project\425Project\obj\Debug\_425Project.EditDisableParkingLotForm.resources

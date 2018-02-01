@@ -6,10 +6,10 @@
     Private Sub CreateButton_Click(sender As Object, e As EventArgs) Handles CreateButton.Click
         ParkingLotNameString = ParkingLotNameTextBox.Text
         StreetAddressString = StreetAddressTextBox.Text
-        CapacityInteger = Integer.Parse(CapacityMaskedTextBox.Text)
-        PriceDecimal = Decimal.Parse(PriceMaskedTextBox.Text)
-        BillingStartTime = Integer.Parse(BillStartTimeMaskedTextBox.Text)
-        BillingEndTime = Integer.Parse(BillEndTimeMaskedTextBox.Text)
+        CapacityInteger = Integer.Parse(CapacityTextBox.Text)
+        PriceDecimal = Decimal.Parse(PriceDollarComboBox.Text & PriceCentComboBox.Text)
+        BillingStartTime = Integer.Parse(BeginBillHourComboBox.Text & BeginBillMinuteComboBox.Text)
+        BillingEndTime = Integer.Parse(EndBillHourComboBox.Text & EndBillMinuteComboBox.Text)
 
         Test1Label.Text = BillingStartTime.ToString
     End Sub

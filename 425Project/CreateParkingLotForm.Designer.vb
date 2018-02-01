@@ -163,7 +163,7 @@ Partial Class CreateParkingLotForm
         Me.ParkingLotIDMaskedTextBox.Location = New System.Drawing.Point(139, 50)
         Me.ParkingLotIDMaskedTextBox.Name = "ParkingLotIDMaskedTextBox"
         Me.ParkingLotIDMaskedTextBox.ReadOnly = True
-        Me.ParkingLotIDMaskedTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.ParkingLotIDMaskedTextBox.Size = New System.Drawing.Size(53, 20)
         Me.ParkingLotIDMaskedTextBox.TabIndex = 11
         '
         'CreateButton
@@ -218,7 +218,7 @@ Partial Class CreateParkingLotForm
         '
         Me.Label10.AutoSize = True
         Me.Label10.ForeColor = System.Drawing.Color.Red
-        Me.Label10.Location = New System.Drawing.Point(335, 157)
+        Me.Label10.Location = New System.Drawing.Point(236, 157)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(11, 13)
         Me.Label10.TabIndex = 16
@@ -228,7 +228,7 @@ Partial Class CreateParkingLotForm
         '
         Me.Label11.AutoSize = True
         Me.Label11.ForeColor = System.Drawing.Color.Red
-        Me.Label11.Location = New System.Drawing.Point(278, 183)
+        Me.Label11.Location = New System.Drawing.Point(290, 183)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(11, 13)
         Me.Label11.TabIndex = 16
@@ -238,7 +238,7 @@ Partial Class CreateParkingLotForm
         '
         Me.Label12.AutoSize = True
         Me.Label12.ForeColor = System.Drawing.Color.Red
-        Me.Label12.Location = New System.Drawing.Point(278, 209)
+        Me.Label12.Location = New System.Drawing.Point(290, 214)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(11, 13)
         Me.Label12.TabIndex = 16
@@ -264,6 +264,7 @@ Partial Class CreateParkingLotForm
         'BeginBillHourComboBox
         '
         Me.BeginBillHourComboBox.FormattingEnabled = True
+        Me.BeginBillHourComboBox.Items.AddRange(New Object() {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"})
         Me.BeginBillHourComboBox.Location = New System.Drawing.Point(139, 180)
         Me.BeginBillHourComboBox.Name = "BeginBillHourComboBox"
         Me.BeginBillHourComboBox.Size = New System.Drawing.Size(36, 21)
@@ -272,6 +273,7 @@ Partial Class CreateParkingLotForm
         'BeginBillMinuteComboBox
         '
         Me.BeginBillMinuteComboBox.FormattingEnabled = True
+        Me.BeginBillMinuteComboBox.Items.AddRange(New Object() {"00", "15", "30", "45"})
         Me.BeginBillMinuteComboBox.Location = New System.Drawing.Point(194, 180)
         Me.BeginBillMinuteComboBox.Name = "BeginBillMinuteComboBox"
         Me.BeginBillMinuteComboBox.Size = New System.Drawing.Size(36, 21)
@@ -280,14 +282,16 @@ Partial Class CreateParkingLotForm
         'BeginBillAMPMComboBox
         '
         Me.BeginBillAMPMComboBox.FormattingEnabled = True
+        Me.BeginBillAMPMComboBox.Items.AddRange(New Object() {"AM", "PM"})
         Me.BeginBillAMPMComboBox.Location = New System.Drawing.Point(236, 180)
         Me.BeginBillAMPMComboBox.Name = "BeginBillAMPMComboBox"
-        Me.BeginBillAMPMComboBox.Size = New System.Drawing.Size(36, 21)
+        Me.BeginBillAMPMComboBox.Size = New System.Drawing.Size(48, 21)
         Me.BeginBillAMPMComboBox.TabIndex = 19
         '
         'EndBillHourComboBox
         '
         Me.EndBillHourComboBox.FormattingEnabled = True
+        Me.EndBillHourComboBox.Items.AddRange(New Object() {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"})
         Me.EndBillHourComboBox.Location = New System.Drawing.Point(139, 206)
         Me.EndBillHourComboBox.Name = "EndBillHourComboBox"
         Me.EndBillHourComboBox.Size = New System.Drawing.Size(36, 21)
@@ -296,6 +300,7 @@ Partial Class CreateParkingLotForm
         'EndBillMinuteComboBox
         '
         Me.EndBillMinuteComboBox.FormattingEnabled = True
+        Me.EndBillMinuteComboBox.Items.AddRange(New Object() {"00", "15", "30", "45"})
         Me.EndBillMinuteComboBox.Location = New System.Drawing.Point(194, 206)
         Me.EndBillMinuteComboBox.Name = "EndBillMinuteComboBox"
         Me.EndBillMinuteComboBox.Size = New System.Drawing.Size(36, 21)
@@ -304,9 +309,10 @@ Partial Class CreateParkingLotForm
         'EndBillAMPMComboBox
         '
         Me.EndBillAMPMComboBox.FormattingEnabled = True
+        Me.EndBillAMPMComboBox.Items.AddRange(New Object() {"AM", "PM"})
         Me.EndBillAMPMComboBox.Location = New System.Drawing.Point(236, 206)
         Me.EndBillAMPMComboBox.Name = "EndBillAMPMComboBox"
-        Me.EndBillAMPMComboBox.Size = New System.Drawing.Size(36, 21)
+        Me.EndBillAMPMComboBox.Size = New System.Drawing.Size(48, 21)
         Me.EndBillAMPMComboBox.TabIndex = 19
         '
         'Label13
@@ -332,6 +338,7 @@ Partial Class CreateParkingLotForm
         'PriceDollarComboBox
         '
         Me.PriceDollarComboBox.FormattingEnabled = True
+        Me.PriceDollarComboBox.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
         Me.PriceDollarComboBox.Location = New System.Drawing.Point(139, 153)
         Me.PriceDollarComboBox.Name = "PriceDollarComboBox"
         Me.PriceDollarComboBox.Size = New System.Drawing.Size(36, 21)
@@ -340,6 +347,7 @@ Partial Class CreateParkingLotForm
         'PriceCentComboBox
         '
         Me.PriceCentComboBox.FormattingEnabled = True
+        Me.PriceCentComboBox.Items.AddRange(New Object() {"00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60", "65", "70", "75", "80", "85", "90", "95"})
         Me.PriceCentComboBox.Location = New System.Drawing.Point(194, 153)
         Me.PriceCentComboBox.Name = "PriceCentComboBox"
         Me.PriceCentComboBox.Size = New System.Drawing.Size(36, 21)
