@@ -128,7 +128,7 @@ Partial Class CreateParkingLotForm
         Me.ConstantBillingCheckBox.Location = New System.Drawing.Point(139, 232)
         Me.ConstantBillingCheckBox.Name = "ConstantBillingCheckBox"
         Me.ConstantBillingCheckBox.Size = New System.Drawing.Size(94, 17)
-        Me.ConstantBillingCheckBox.TabIndex = 7
+        Me.ConstantBillingCheckBox.TabIndex = 13
         Me.ConstantBillingCheckBox.Text = "24 Hour Billing"
         Me.ConstantBillingCheckBox.UseVisualStyleBackColor = True
         '
@@ -138,7 +138,7 @@ Partial Class CreateParkingLotForm
         Me.DisableBillingCheckBox.Location = New System.Drawing.Point(139, 255)
         Me.DisableBillingCheckBox.Name = "DisableBillingCheckBox"
         Me.DisableBillingCheckBox.Size = New System.Drawing.Size(91, 17)
-        Me.DisableBillingCheckBox.TabIndex = 8
+        Me.DisableBillingCheckBox.TabIndex = 14
         Me.DisableBillingCheckBox.Text = "Disable Billing"
         Me.DisableBillingCheckBox.UseVisualStyleBackColor = True
         '
@@ -148,7 +148,7 @@ Partial Class CreateParkingLotForm
         Me.ParkingLotNameTextBox.MaxLength = 30
         Me.ParkingLotNameTextBox.Name = "ParkingLotNameTextBox"
         Me.ParkingLotNameTextBox.Size = New System.Drawing.Size(266, 20)
-        Me.ParkingLotNameTextBox.TabIndex = 9
+        Me.ParkingLotNameTextBox.TabIndex = 0
         '
         'StreetAddressTextBox
         '
@@ -156,7 +156,7 @@ Partial Class CreateParkingLotForm
         Me.StreetAddressTextBox.MaxLength = 30
         Me.StreetAddressTextBox.Name = "StreetAddressTextBox"
         Me.StreetAddressTextBox.Size = New System.Drawing.Size(266, 20)
-        Me.StreetAddressTextBox.TabIndex = 10
+        Me.StreetAddressTextBox.TabIndex = 1
         '
         'ParkingLotIDMaskedTextBox
         '
@@ -164,7 +164,7 @@ Partial Class CreateParkingLotForm
         Me.ParkingLotIDMaskedTextBox.Name = "ParkingLotIDMaskedTextBox"
         Me.ParkingLotIDMaskedTextBox.ReadOnly = True
         Me.ParkingLotIDMaskedTextBox.Size = New System.Drawing.Size(53, 20)
-        Me.ParkingLotIDMaskedTextBox.TabIndex = 11
+        Me.ParkingLotIDMaskedTextBox.TabIndex = 21
         '
         'CreateButton
         '
@@ -181,7 +181,7 @@ Partial Class CreateParkingLotForm
         Me.ClearButton.Location = New System.Drawing.Point(186, 336)
         Me.ClearButton.Name = "ClearButton"
         Me.ClearButton.Size = New System.Drawing.Size(102, 40)
-        Me.ClearButton.TabIndex = 15
+        Me.ClearButton.TabIndex = 16
         Me.ClearButton.Text = "Clear"
         Me.ClearButton.UseVisualStyleBackColor = True
         '
@@ -190,7 +190,7 @@ Partial Class CreateParkingLotForm
         Me.BackButton.Location = New System.Drawing.Point(186, 382)
         Me.BackButton.Name = "BackButton"
         Me.BackButton.Size = New System.Drawing.Size(102, 40)
-        Me.BackButton.TabIndex = 15
+        Me.BackButton.TabIndex = 17
         Me.BackButton.Text = "Back"
         Me.BackButton.UseVisualStyleBackColor = True
         '
@@ -259,7 +259,7 @@ Partial Class CreateParkingLotForm
         Me.CapacityTextBox.MaxLength = 3
         Me.CapacityTextBox.Name = "CapacityTextBox"
         Me.CapacityTextBox.Size = New System.Drawing.Size(36, 20)
-        Me.CapacityTextBox.TabIndex = 18
+        Me.CapacityTextBox.TabIndex = 2
         '
         'BeginBillHourComboBox
         '
@@ -268,7 +268,7 @@ Partial Class CreateParkingLotForm
         Me.BeginBillHourComboBox.Location = New System.Drawing.Point(139, 180)
         Me.BeginBillHourComboBox.Name = "BeginBillHourComboBox"
         Me.BeginBillHourComboBox.Size = New System.Drawing.Size(36, 21)
-        Me.BeginBillHourComboBox.TabIndex = 19
+        Me.BeginBillHourComboBox.TabIndex = 6
         '
         'BeginBillMinuteComboBox
         '
@@ -277,7 +277,7 @@ Partial Class CreateParkingLotForm
         Me.BeginBillMinuteComboBox.Location = New System.Drawing.Point(194, 180)
         Me.BeginBillMinuteComboBox.Name = "BeginBillMinuteComboBox"
         Me.BeginBillMinuteComboBox.Size = New System.Drawing.Size(36, 21)
-        Me.BeginBillMinuteComboBox.TabIndex = 19
+        Me.BeginBillMinuteComboBox.TabIndex = 8
         '
         'BeginBillAMPMComboBox
         '
@@ -286,7 +286,7 @@ Partial Class CreateParkingLotForm
         Me.BeginBillAMPMComboBox.Location = New System.Drawing.Point(236, 180)
         Me.BeginBillAMPMComboBox.Name = "BeginBillAMPMComboBox"
         Me.BeginBillAMPMComboBox.Size = New System.Drawing.Size(48, 21)
-        Me.BeginBillAMPMComboBox.TabIndex = 19
+        Me.BeginBillAMPMComboBox.TabIndex = 9
         '
         'EndBillHourComboBox
         '
@@ -295,7 +295,7 @@ Partial Class CreateParkingLotForm
         Me.EndBillHourComboBox.Location = New System.Drawing.Point(139, 206)
         Me.EndBillHourComboBox.Name = "EndBillHourComboBox"
         Me.EndBillHourComboBox.Size = New System.Drawing.Size(36, 21)
-        Me.EndBillHourComboBox.TabIndex = 19
+        Me.EndBillHourComboBox.TabIndex = 10
         '
         'EndBillMinuteComboBox
         '
@@ -304,7 +304,7 @@ Partial Class CreateParkingLotForm
         Me.EndBillMinuteComboBox.Location = New System.Drawing.Point(194, 206)
         Me.EndBillMinuteComboBox.Name = "EndBillMinuteComboBox"
         Me.EndBillMinuteComboBox.Size = New System.Drawing.Size(36, 21)
-        Me.EndBillMinuteComboBox.TabIndex = 19
+        Me.EndBillMinuteComboBox.TabIndex = 11
         '
         'EndBillAMPMComboBox
         '
@@ -313,7 +313,7 @@ Partial Class CreateParkingLotForm
         Me.EndBillAMPMComboBox.Location = New System.Drawing.Point(236, 206)
         Me.EndBillAMPMComboBox.Name = "EndBillAMPMComboBox"
         Me.EndBillAMPMComboBox.Size = New System.Drawing.Size(48, 21)
-        Me.EndBillAMPMComboBox.TabIndex = 19
+        Me.EndBillAMPMComboBox.TabIndex = 12
         '
         'Label13
         '
@@ -322,7 +322,7 @@ Partial Class CreateParkingLotForm
         Me.Label13.Location = New System.Drawing.Point(181, 183)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(11, 15)
-        Me.Label13.TabIndex = 20
+        Me.Label13.TabIndex = 7
         Me.Label13.Text = ":"
         '
         'Label14
@@ -332,7 +332,7 @@ Partial Class CreateParkingLotForm
         Me.Label14.Location = New System.Drawing.Point(181, 207)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(11, 15)
-        Me.Label14.TabIndex = 20
+        Me.Label14.TabIndex = 9
         Me.Label14.Text = ":"
         '
         'PriceDollarComboBox
@@ -342,7 +342,7 @@ Partial Class CreateParkingLotForm
         Me.PriceDollarComboBox.Location = New System.Drawing.Point(139, 153)
         Me.PriceDollarComboBox.Name = "PriceDollarComboBox"
         Me.PriceDollarComboBox.Size = New System.Drawing.Size(36, 21)
-        Me.PriceDollarComboBox.TabIndex = 19
+        Me.PriceDollarComboBox.TabIndex = 3
         '
         'PriceCentComboBox
         '
@@ -351,7 +351,7 @@ Partial Class CreateParkingLotForm
         Me.PriceCentComboBox.Location = New System.Drawing.Point(194, 153)
         Me.PriceCentComboBox.Name = "PriceCentComboBox"
         Me.PriceCentComboBox.Size = New System.Drawing.Size(36, 21)
-        Me.PriceCentComboBox.TabIndex = 19
+        Me.PriceCentComboBox.TabIndex = 5
         '
         'Label15
         '
@@ -360,7 +360,7 @@ Partial Class CreateParkingLotForm
         Me.Label15.Location = New System.Drawing.Point(181, 155)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(11, 15)
-        Me.Label15.TabIndex = 20
+        Me.Label15.TabIndex = 4
         Me.Label15.Text = "."
         '
         'CreateParkingLotForm

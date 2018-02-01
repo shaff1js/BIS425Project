@@ -1,6 +1,6 @@
 ﻿Public Class CreateParkingLotForm
-    Dim ParkingLotNameString, StreetAddressString As String
-    Dim CapacityInteger, BillingStartTime, BillingEndTime As Integer
+    Dim ParkingLotNameString, StreetAddressString, BillStartTimeString, BillEndTimeString As String
+    Dim CapacityInteger, BillingStartInteger, BillingEndInteger As Integer
     Dim PriceDecimal As Decimal
 
     Private Sub CreateButton_Click(sender As Object, e As EventArgs) Handles CreateButton.Click
@@ -8,10 +8,17 @@
         StreetAddressString = StreetAddressTextBox.Text
         CapacityInteger = Integer.Parse(CapacityTextBox.Text)
         PriceDecimal = Decimal.Parse(PriceDollarComboBox.Text & PriceCentComboBox.Text)
-        BillingStartTime = Integer.Parse(BeginBillHourComboBox.Text & BeginBillMinuteComboBox.Text)
-        BillingEndTime = Integer.Parse(EndBillHourComboBox.Text & EndBillMinuteComboBox.Text)
+        ' BillingStartTime = Integer.Parse(BeginBillHourComboBox.Text & BeginBillMinuteComboBox.Text)
+        'BillingEndTime = Integer.Parse(EndBillHourComboBox.Text & EndBillMinuteComboBox.Text)
 
-        Test1Label.Text = BillingStartTime.ToString
+        'format billing start time
+        If BeginBillAMPMComboBox.Text = "AM" Then
+            BillStartTimeString = (BeginBillHourComboBox.Text & BeginBillMinuteComboBox.Text & "00")
+        Else
+
+
+        End If
+        Test1Label.Text = BillStartTimeString
     End Sub
 
     Private Sub ConstantBillingCheckBox_MouseUp(sender As Object, e As MouseEventArgs) Handles ConstantBillingCheckBox.MouseUp
