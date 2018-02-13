@@ -22,29 +22,103 @@ Partial Class StudentPortalForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.CapacityButton = New System.Windows.Forms.Button()
+        Me.SemesterButton = New System.Windows.Forms.Button()
+        Me.MonthlyButton = New System.Windows.Forms.Button()
+        Me.EditButton = New System.Windows.Forms.Button()
+        Me.DisableButton = New System.Windows.Forms.Button()
+        Me.AddVehicleButton = New System.Windows.Forms.Button()
+        Me.CMULabel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'Button1
+        'CapacityButton
         '
-        Me.Button1.Location = New System.Drawing.Point(182, 194)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "FUck Off"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.CapacityButton.Location = New System.Drawing.Point(180, 332)
+        Me.CapacityButton.Name = "CapacityButton"
+        Me.CapacityButton.Size = New System.Drawing.Size(94, 23)
+        Me.CapacityButton.TabIndex = 13
+        Me.CapacityButton.Text = "&Lot Capacity"
+        Me.CapacityButton.UseVisualStyleBackColor = True
+        '
+        'SemesterButton
+        '
+        Me.SemesterButton.Location = New System.Drawing.Point(180, 290)
+        Me.SemesterButton.Name = "SemesterButton"
+        Me.SemesterButton.Size = New System.Drawing.Size(94, 23)
+        Me.SemesterButton.TabIndex = 12
+        Me.SemesterButton.Text = "&Semester Bill"
+        Me.SemesterButton.UseVisualStyleBackColor = True
+        '
+        'MonthlyButton
+        '
+        Me.MonthlyButton.Location = New System.Drawing.Point(180, 246)
+        Me.MonthlyButton.Name = "MonthlyButton"
+        Me.MonthlyButton.Size = New System.Drawing.Size(94, 23)
+        Me.MonthlyButton.TabIndex = 11
+        Me.MonthlyButton.Text = "&Monthly Bill"
+        Me.MonthlyButton.UseVisualStyleBackColor = True
+        '
+        'EditButton
+        '
+        Me.EditButton.Location = New System.Drawing.Point(180, 206)
+        Me.EditButton.Name = "EditButton"
+        Me.EditButton.Size = New System.Drawing.Size(94, 23)
+        Me.EditButton.TabIndex = 10
+        Me.EditButton.Text = "&Edit Account"
+        Me.EditButton.UseVisualStyleBackColor = True
+        '
+        'DisableButton
+        '
+        Me.DisableButton.Location = New System.Drawing.Point(180, 164)
+        Me.DisableButton.Name = "DisableButton"
+        Me.DisableButton.Size = New System.Drawing.Size(94, 23)
+        Me.DisableButton.TabIndex = 9
+        Me.DisableButton.Text = "&Disable Vehicle"
+        Me.DisableButton.UseVisualStyleBackColor = True
+        '
+        'AddVehicleButton
+        '
+        Me.AddVehicleButton.Location = New System.Drawing.Point(180, 119)
+        Me.AddVehicleButton.Name = "AddVehicleButton"
+        Me.AddVehicleButton.Size = New System.Drawing.Size(94, 23)
+        Me.AddVehicleButton.TabIndex = 8
+        Me.AddVehicleButton.Text = "&Add Vehicle"
+        Me.AddVehicleButton.UseVisualStyleBackColor = True
+        '
+        'CMULabel
+        '
+        Me.CMULabel.AutoSize = True
+        Me.CMULabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CMULabel.Location = New System.Drawing.Point(141, 77)
+        Me.CMULabel.Name = "CMULabel"
+        Me.CMULabel.Size = New System.Drawing.Size(177, 20)
+        Me.CMULabel.TabIndex = 7
+        Me.CMULabel.Text = "CMU Parking System"
         '
         'StudentPortalForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(452, 451)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.CapacityButton)
+        Me.Controls.Add(Me.SemesterButton)
+        Me.Controls.Add(Me.MonthlyButton)
+        Me.Controls.Add(Me.EditButton)
+        Me.Controls.Add(Me.DisableButton)
+        Me.Controls.Add(Me.AddVehicleButton)
+        Me.Controls.Add(Me.CMULabel)
         Me.Name = "StudentPortalForm"
         Me.Text = "StudentPortalForm"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents CapacityButton As Button
+    Friend WithEvents SemesterButton As Button
+    Friend WithEvents MonthlyButton As Button
+    Friend WithEvents EditButton As Button
+    Friend WithEvents DisableButton As Button
+    Friend WithEvents AddVehicleButton As Button
+    Friend WithEvents CMULabel As Label
 End Class

@@ -72,6 +72,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddUserForm.Designer.vb">
+      <DependentUpon>AddUserForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddUserForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPortalForm.Designer.vb">
+      <DependentUpon>AdminPortalForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPortalForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CreateParkingLotForm.Designer.vb">
       <DependentUpon>CreateParkingLotForm.vb</DependentUpon>
     </Compile>
@@ -115,6 +127,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddUserForm.resx">
+      <DependentUpon>AddUserForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPortalForm.resx">
+      <DependentUpon>AdminPortalForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateParkingLotForm.resx">
       <DependentUpon>CreateParkingLotForm.vb</DependentUpon>
     </EmbeddedResource>
