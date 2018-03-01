@@ -12,10 +12,13 @@ GlobalID VarChar(8) not null,
 Email Varchar(60),
 PhoneNumber char(12),
 Password varchar(30),
+#some sore of barcode scanned item.  not sure of name or datatype
+LastUpdate timestamp,
 constraint UserPK primary key (UserID));
 
 Create Table ParkingLot(
-ParkingLotID Int(2) not null auto_increment,
+ParkingLotinstanceID int(9) not null auto_increment,
+ParkingLotID Int(2) not null,
 ParkingLotName varchar(30),
 StreetAddress varchar(30) not null,
 Capacity int(3) not null,
@@ -24,6 +27,9 @@ BillStartTime Int(6) not null,
 BillEndTime int(6) not null,
 24HourCharge char(1),
 DisableTicketing char(1),
+ValidityStartDate Double,
+ValidityEndDate Double,
+LastUpdate timestamp,
 constraint ParkingLotPK primary key (ParkingLotID));
 
 create table Vehicle(
@@ -34,6 +40,7 @@ Year int(4) not null,
 Color varchar(15) not null,
 LicensePlate varchar(10),
 UserID int(6),
+LastUpdate timestamp,
 constraint VehiclePK primary key (VehicleID),
 constraint VehicleFK foreign key (UserID) references USer(UserID));
 
