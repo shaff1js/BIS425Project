@@ -30,7 +30,7 @@ DisableTicketing char(1),
 ValidityStartDate Double,
 ValidityEndDate Double,
 LastUpdate timestamp,
-constraint ParkingLotPK primary key (ParkingLotID));
+constraint ParkingLotPK primary key (ParkingLotInstanceID));
 
 create table Vehicle(
 VehicleID Int(6) not null auto_increment,
@@ -51,5 +51,5 @@ UserID int(6) not null,
 CheckInTime double not null,
 CheckOutTime double not null,
 constraint ParkingPK primary key (ParkingID),
-constraint ParkingFK1 foreign key (ParkingLotID) references ParkingLot(ParkingLotID),
+constraint ParkingFK1 foreign key (ParkingLotID) references ParkingLot(ParkingLotInstanceID),
 constraint ParkingFK2 foreign key (UserID) references User(UserID));
