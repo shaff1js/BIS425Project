@@ -1,7 +1,7 @@
-drop table Parking;
-drop table Vehicle;
-drop table ParkingLot;
-drop table User;
+# drop table Parking;
+# drop table Vehicle;
+# drop table ParkingLot;
+# drop table User;
    
 Create Table User(
 UserID int(6) not null auto_increment,
