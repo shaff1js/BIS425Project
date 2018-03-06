@@ -15,8 +15,8 @@ VALUES ('Chevrolet', 'Cruze', 2010, 'Black', 'FTM P2500');
 
 #Parking Lot
 Insert into Parkinglot(ParkingLotID, ParkingLotName, StreetAddress,Capacity, Price, BillStartTime,BillEndTime,24HourCharge,DisableTicketing,ValidityStartDate)
- VALUES (1, "Grawn", "123 Main St", 115, .2, 070000, 160000, 0, 0, 20180301);
+ VALUES (1, 'Grawn', '123 Main St', 115, .2, 070000, 160000, 0, 0, 20180301);
  Insert into Parkinglot(ParkingLotID, ParkingLotName, StreetAddress,Capacity, Price, BillStartTime,BillEndTime,24HourCharge,DisableTicketing,ValidityStartDate)
- VALUES (2, "Music", "200 Main St", 400, .15, 070000, 160000, 0, 0, 20180301);
+ VALUES (2, 'Music', '200 Main St', 400, .15, 070000, 160000, 0, 0, 20180301);
  Insert into Parkinglot(ParkingLotID, ParkingLotName, StreetAddress,Capacity, Price, BillStartTime,BillEndTime,24HourCharge,DisableTicketing,ValidityStartDate)
- VALUES (1, "Towers", "500 Main St", 400, .15, 070000, 160000, 0, 0, 20180301);
+ VALUES (1, 'Towers', '500 Main St', 400, .15, 070000, 160000, 0, 0, 20180301);
