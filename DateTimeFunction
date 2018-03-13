@@ -1,0 +1,12 @@
+'date time function for checkin and check out
+   Dim yearstring, monthstring, daystring, hourstring, minutestring, secondstring As String
+        yearstring = Today.Year
+        monthstring = Today.Month
+        daystring = Today.Day
+        hourstring = TimeOfDay.Hour
+        minutestring = TimeOfDay.Minute
+        secondstring = TimeOfDay.Second
+
+
+        Label1.Text = yearstring & monthstring & daystring & hourstring & minutestring & secondstring
+        'Label1.Text = hourstring
