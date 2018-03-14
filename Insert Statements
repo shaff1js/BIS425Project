@@ -10,10 +10,10 @@ INSERT INTO USER(globalID, phonenumber, role, email, password, firstname, lastna
 INSERT INTO vehicle (make, model, year, color, licenseplate, userid,active) 
 VALUES ('Chevrolet', 'Trax', 2016, 'Blue', 'JWC U2856',1,1);
 
-INSERT INTO vehicle (make, model, year, color, licenseplate) 
+INSERT INTO vehicle (make, model, year, color, licenseplate, userid, active) 
 VALUES ('Ford', 'Escape', 2005, 'Silver', 'YDW M5725',3,1);
 
-INSERT INTO vehicle (make, model, year, color, licenseplate) 
+INSERT INTO vehicle (make, model, year, color, licenseplate, userid, active) 
 VALUES ('Chevrolet', 'Cruze', 2010, 'Black', 'FTM P2500',3,0);
 
 #Parking Lot
@@ -22,4 +22,4 @@ Insert into Parkinglot(ParkingLotID, ParkingLotName, StreetAddress,Capacity, Pri
  Insert into Parkinglot(ParkingLotID, ParkingLotName, StreetAddress,Capacity, Price, BillStartTime,BillEndTime,24HourCharge,DisableTicketing,ValidityStartDate)
  VALUES (2, 'Music', '200 Main St', 400, .15, 070000, 160000, 0, 0, 20180301);
  Insert into Parkinglot(ParkingLotID, ParkingLotName, StreetAddress,Capacity, Price, BillStartTime,BillEndTime,24HourCharge,DisableTicketing,ValidityStartDate)
- VALUES (1, 'Towers', '500 Main St', 400, .15, 070000, 160000, 0, 0, 20180301);
+ VALUES (3, 'Towers', '500 Main St', 400, .15, 070000, 160000, 0, 0, 20180301);
