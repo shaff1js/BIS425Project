@@ -1,17 +1,20 @@
 #users
-INSERT INTO USER VALUES ('wolfe1kn', '989-575-0236', 1, 'wolfe1kn@cmich.edu', 'mypass', 'Kristen', 'Wolfe');
-INSERT INTO USER VALUES ('shaff1js', '989-555-9786', 1, 'shaff1js@cmich.edu', 'password', 'Jon', 'Shaffer');
-INSERT INTO USER VALUES ('huang1z', '989-544-2557', 2, 'huang1z@cmich.edu', 'cmuprof', 'Zhenyu', 'Huang');
+INSERT INTO USER (globalID, phonenumber, role, email, password, firstname, lastname)
+  VALUES ('wolfe1kn', '989-575-0236', 1, 'wolfe1kn@cmich.edu', 'mypass', 'Kristen', 'Wolfe');
+INSERT INTO USER(globalID, phonenumber, role, email, password, firstname, lastname)
+  VALUES ('shaff1js', '989-555-9786', 2, 'shaff1js@cmich.edu', 'password', 'Jon', 'Shaffer');
+INSERT INTO USER(globalID, phonenumber, role, email, password, firstname, lastname)
+  VALUES ('huang1z', '989-544-2557', 1, 'huang1z@cmich.edu', 'cmuprof', 'Zhenyu', 'Huang');
 
 #vehicles
-INSERT INTO vehicle (make, model, year, color, licenseplate) 
-VALUES ('Chevrolet', 'Trax', 2016, 'Blue', 'JWC U2856');
+INSERT INTO vehicle (make, model, year, color, licenseplate, userid,active) 
+VALUES ('Chevrolet', 'Trax', 2016, 'Blue', 'JWC U2856',1,1);
 
 INSERT INTO vehicle (make, model, year, color, licenseplate) 
-VALUES ('Ford', 'Escape', 2005, 'Silver', 'YDW M5725');
+VALUES ('Ford', 'Escape', 2005, 'Silver', 'YDW M5725',3,1);
 
 INSERT INTO vehicle (make, model, year, color, licenseplate) 
-VALUES ('Chevrolet', 'Cruze', 2010, 'Black', 'FTM P2500');
+VALUES ('Chevrolet', 'Cruze', 2010, 'Black', 'FTM P2500',3,0);
 
 #Parking Lot
 Insert into Parkinglot(ParkingLotID, ParkingLotName, StreetAddress,Capacity, Price, BillStartTime,BillEndTime,24HourCharge,DisableTicketing,ValidityStartDate)
