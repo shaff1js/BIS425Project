@@ -53,5 +53,5 @@ CheckInTime double not null,
 CheckOutTime double,
 LastUpdate timestamp,
 constraint ParkingPK primary key (ParkingID),
-constraint ParkingFK1 foreign key (ParkingLotID) references ParkingLot(ParkingLotInstanceID),
+constraint ParkingFK1 foreign key (ParkingLotInstanceID) references ParkingLot(ParkingLotInstanceID),
 constraint ParkingFK2 foreign key (UserID) references User(UserID));
