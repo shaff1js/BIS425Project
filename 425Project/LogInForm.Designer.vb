@@ -28,8 +28,9 @@ Partial Class LogInForm
         Me.PasswordLabel = New System.Windows.Forms.Label()
         Me.RegisterLabel = New System.Windows.Forms.Label()
         Me.UserNameTextBox = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.LogInButton = New System.Windows.Forms.Button()
         Me.PasswordMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Title1Label
@@ -89,15 +90,15 @@ Partial Class LogInForm
         Me.UserNameTextBox.Size = New System.Drawing.Size(172, 20)
         Me.UserNameTextBox.TabIndex = 5
         '
-        'Button1
+        'LogInButton
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(185, 173)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(90, 40)
-        Me.Button1.TabIndex = 7
-        Me.Button1.Text = "Log In"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.LogInButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LogInButton.Location = New System.Drawing.Point(185, 173)
+        Me.LogInButton.Name = "LogInButton"
+        Me.LogInButton.Size = New System.Drawing.Size(90, 40)
+        Me.LogInButton.TabIndex = 7
+        Me.LogInButton.Text = "Log In"
+        Me.LogInButton.UseVisualStyleBackColor = True
         '
         'PasswordMaskedTextBox
         '
@@ -107,13 +108,23 @@ Partial Class LogInForm
         Me.PasswordMaskedTextBox.Size = New System.Drawing.Size(172, 20)
         Me.PasswordMaskedTextBox.TabIndex = 6
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(12, 269)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(36, 13)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "Swipe"
+        '
         'LogInForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(444, 291)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PasswordMaskedTextBox)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.LogInButton)
         Me.Controls.Add(Me.UserNameTextBox)
         Me.Controls.Add(Me.RegisterLabel)
         Me.Controls.Add(Me.PasswordLabel)
@@ -135,6 +146,7 @@ Partial Class LogInForm
     Friend WithEvents PasswordLabel As Label
     Friend WithEvents RegisterLabel As Label
     Friend WithEvents UserNameTextBox As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents LogInButton As Button
     Friend WithEvents PasswordMaskedTextBox As MaskedTextBox
+    Friend WithEvents Label1 As Label
 End Class

@@ -23,7 +23,6 @@ Partial Class CreateParkingLotForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -34,7 +33,6 @@ Partial Class CreateParkingLotForm
         Me.DisableBillingCheckBox = New System.Windows.Forms.CheckBox()
         Me.ParkingLotNameTextBox = New System.Windows.Forms.TextBox()
         Me.StreetAddressTextBox = New System.Windows.Forms.TextBox()
-        Me.ParkingLotIDMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
         Me.CreateButton = New System.Windows.Forms.Button()
         Me.ClearButton = New System.Windows.Forms.Button()
         Me.BackButton = New System.Windows.Forms.Button()
@@ -44,7 +42,6 @@ Partial Class CreateParkingLotForm
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.CreateParkingLotToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Test1Label = New System.Windows.Forms.Label()
         Me.CapacityTextBox = New System.Windows.Forms.TextBox()
         Me.BeginBillHourComboBox = New System.Windows.Forms.ComboBox()
         Me.BeginBillMinuteComboBox = New System.Windows.Forms.ComboBox()
@@ -58,15 +55,6 @@ Partial Class CreateParkingLotForm
         Me.PriceCentComboBox = New System.Windows.Forms.ComboBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(55, 53)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(78, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Parking Lot ID:"
         '
         'Label2
         '
@@ -103,6 +91,7 @@ Partial Class CreateParkingLotForm
         Me.Label5.Size = New System.Drawing.Size(34, 13)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Price:"
+        Me.CreateParkingLotToolTip.SetToolTip(Me.Label5, "The price is for a 15 minute increment in the parking lot.")
         '
         'Label6
         '
@@ -157,14 +146,6 @@ Partial Class CreateParkingLotForm
         Me.StreetAddressTextBox.Name = "StreetAddressTextBox"
         Me.StreetAddressTextBox.Size = New System.Drawing.Size(266, 20)
         Me.StreetAddressTextBox.TabIndex = 1
-        '
-        'ParkingLotIDMaskedTextBox
-        '
-        Me.ParkingLotIDMaskedTextBox.Location = New System.Drawing.Point(139, 50)
-        Me.ParkingLotIDMaskedTextBox.Name = "ParkingLotIDMaskedTextBox"
-        Me.ParkingLotIDMaskedTextBox.ReadOnly = True
-        Me.ParkingLotIDMaskedTextBox.Size = New System.Drawing.Size(53, 20)
-        Me.ParkingLotIDMaskedTextBox.TabIndex = 21
         '
         'CreateButton
         '
@@ -243,15 +224,6 @@ Partial Class CreateParkingLotForm
         Me.Label12.Size = New System.Drawing.Size(11, 13)
         Me.Label12.TabIndex = 16
         Me.Label12.Text = "*"
-        '
-        'Test1Label
-        '
-        Me.Test1Label.AutoSize = True
-        Me.Test1Label.Location = New System.Drawing.Point(349, 317)
-        Me.Test1Label.Name = "Test1Label"
-        Me.Test1Label.Size = New System.Drawing.Size(105, 13)
-        Me.Test1Label.TabIndex = 17
-        Me.Test1Label.Text = "Remove after testing"
         '
         'CapacityTextBox
         '
@@ -338,7 +310,7 @@ Partial Class CreateParkingLotForm
         'PriceDollarComboBox
         '
         Me.PriceDollarComboBox.FormattingEnabled = True
-        Me.PriceDollarComboBox.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        Me.PriceDollarComboBox.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5"})
         Me.PriceDollarComboBox.Location = New System.Drawing.Point(139, 153)
         Me.PriceDollarComboBox.Name = "PriceDollarComboBox"
         Me.PriceDollarComboBox.Size = New System.Drawing.Size(36, 21)
@@ -380,7 +352,6 @@ Partial Class CreateParkingLotForm
         Me.Controls.Add(Me.PriceDollarComboBox)
         Me.Controls.Add(Me.BeginBillHourComboBox)
         Me.Controls.Add(Me.CapacityTextBox)
-        Me.Controls.Add(Me.Test1Label)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
@@ -389,7 +360,6 @@ Partial Class CreateParkingLotForm
         Me.Controls.Add(Me.BackButton)
         Me.Controls.Add(Me.ClearButton)
         Me.Controls.Add(Me.CreateButton)
-        Me.Controls.Add(Me.ParkingLotIDMaskedTextBox)
         Me.Controls.Add(Me.StreetAddressTextBox)
         Me.Controls.Add(Me.ParkingLotNameTextBox)
         Me.Controls.Add(Me.DisableBillingCheckBox)
@@ -400,15 +370,14 @@ Partial Class CreateParkingLotForm
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "CreateParkingLotForm"
         Me.Text = "Creat Parking Lot"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
@@ -419,7 +388,6 @@ Partial Class CreateParkingLotForm
     Friend WithEvents DisableBillingCheckBox As CheckBox
     Friend WithEvents ParkingLotNameTextBox As TextBox
     Friend WithEvents StreetAddressTextBox As TextBox
-    Friend WithEvents ParkingLotIDMaskedTextBox As MaskedTextBox
     Friend WithEvents CreateParkingLotToolTip As ToolTip
     Friend WithEvents CreateButton As Button
     Friend WithEvents ClearButton As Button
@@ -429,7 +397,6 @@ Partial Class CreateParkingLotForm
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents Test1Label As Label
     Friend WithEvents CapacityTextBox As TextBox
     Friend WithEvents BeginBillHourComboBox As ComboBox
     Friend WithEvents BeginBillMinuteComboBox As ComboBox

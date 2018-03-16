@@ -46,12 +46,12 @@ constraint VehiclePK primary key (VehicleID),
 constraint VehicleFK foreign key (UserID) references USer(UserID));
 
 create table Parking(
-ParkingID bigint(12) not null auto_increment,
-ParkingLotInstanceID int(9) not null,
+ParkingID int(12) not null auto_increment,
+ParkingLotID int(2) not null,
 UserID int(6) not null,
-CheckInTime bigint(14) not null,
-CheckOutTime bigint(14),
+CheckInTime double not null,
+CheckOutTime double not null,
 LastUpdate timestamp,
 constraint ParkingPK primary key (ParkingID),
-constraint ParkingFK1 foreign key (ParkingLotInstanceID) references ParkingLot(ParkingLotInstanceID),
+constraint ParkingFK1 foreign key (ParkingLotID) references ParkingLot(ParkingLotInstanceID),
 constraint ParkingFK2 foreign key (UserID) references User(UserID));
