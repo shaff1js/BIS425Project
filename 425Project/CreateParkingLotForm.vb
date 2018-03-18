@@ -174,6 +174,7 @@
         DB.AddParam("@24HourCharge", ConstantParkingString)
         DB.AddParam("@DisableTIcketing", DisableParkingString)
         DB.AddParam("@ValidityStartDate", ValidityStartDateString)
+        DB.AddParam("@Enabled", "1")
         'perform insert
         Try
             DB.ExecuteQuery("INSERT INTO ParkingLot(ParkingLotID, ParkingLotName, StreetAddress, Capacity, Price, BillStartTime, BillEndTime, 24HourCharge, DisableTicketing, ValidityStartDate) VALUES(?,?,?,?,?,?,?,?,?,?)")
