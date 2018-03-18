@@ -1,0 +1,113 @@
+ drop table Parking;
+ drop table Vehicle;
+ drop table ParkingLot;
+ drop table User;
+   
+Create Table User(
+UserID int(6) not null auto_increment,
+FirstName varchar(30) not null,
+LastName varchar(30) not null,
+Role int(1) not null,
+GlobalID VarChar(8) not null,
+Email Varchar(60),
+PhoneNumber char(12),
+Password varchar(30),
+Enabled char(1),
+#some sore of barcode scanned item.  not sure of name or datatype
+LastUpdate timestamp,
+constraint UserPK primary key (UserID));
+
+Create Table ParkingLot(
+ParkingLotinstanceID int(9) not null auto_increment,
+ParkingLotID Int(2) not null,
+ParkingLotName varchar(30),
+StreetAddress varchar(30) not null,
+Capacity int(3) not null,
+Price decimal(4,2) not null,
+BillStartTime Int(6) not null,
+BillEndTime int(6) not null,
+24HourCharge char(1),
+DisableTicketing char(1),
+Enabled char(1),
+ValidityStartDate Double,
+ValidityEndDate Double,
+LastUpdate timestamp,
+constraint ParkingLotPK primary key (ParkingLotInstanceID));
+
+create table Vehicle(
+VehicleID Int(6) not null auto_increment,
+Make Varchar(20) not null,
+Model Varchar(20) not null,
+Year int(4) not null,
+Color varchar(15) not null,
+LicensePlate varchar(10),
+UserID int(6),
+Active int(1),
+LastUpdate timestamp,
+constraint VehiclePK primary key (VehicleID),
+constraint VehicleFK foreign key (UserID) references USer(UserID));
+
+create table Parking(
+ParkingID bigint(12) not null auto_increment,
+ParkingLotInstanceID int(9) not null,
+UserID int(6) not null,
+CheckInTime bigint(14) not null,
+CheckOutTime bigint(14),
+LastUpdate timestamp,
+constraint ParkingPK primary key (ParkingID),
+constraint ParkingFK1 foreign key (ParkingLotInstanceID) references ParkingLot(ParkingLotInstanceID),
+constraint ParkingFK2 foreign key (UserID) references User(UserID));
+#users
+INSERT INTO USER (globalID, phonenumber, role, email, password, firstname, lastname, enabled)
+  VALUES ('wolfe1kn', '989-575-0236', 1, 'wolfe1kn@cmich.edu', 'mypass', 'Kristen', 'Wolfe', '1');
+INSERT INTO USER(globalID, phonenumber, role, email, password, firstname, lastname, enabled)
+  VALUES ('shaff1js', '989-555-9786', 2, 'shaff1js@cmich.edu', 'password', 'Jon', 'Shaffer','1');
+INSERT INTO USER(globalID, phonenumber, role, email, password, firstname, lastname, enabled)
+  VALUES ('huang1z', '989-544-2557', 1, 'huang1z@cmich.edu', 'cmuprof', 'Zhenyu', 'Huang','1');
+
+#vehicles
+INSERT INTO vehicle (make, model, year, color, licenseplate, userid,active) 
+VALUES ('Chevrolet', 'Trax', 2016, 'Blue', 'JWC U2856',1,1);
+
+INSERT INTO vehicle (make, model, year, color, licenseplate, userid, active) 
+VALUES ('Ford', 'Escape', 2005, 'Silver', 'YDW M5725',3,1);
+
+INSERT INTO vehicle (make, model, year, color, licenseplate, userid, active) 
+VALUES ('Chevrolet', 'Cruze', 2010, 'Black', 'FTM P2500',3,0);
+
+#Parking Lot
+Insert into Parkinglot(ParkingLotID, ParkingLotName, StreetAddress,Capacity, Price, BillStartTime,BillEndTime,24HourCharge,DisableTicketing,ValidityStartDate, Enabled)
+ VALUES (1, 'Grawn', '123 Main St', 115, .2, 070000, 160000, 0, 0, 20180301, '1');
+ Insert into Parkinglot(ParkingLotID, ParkingLotName, StreetAddress,Capacity, Price, BillStartTime,BillEndTime,24HourCharge,DisableTicketing,ValidityStartDate, enabled)
+ VALUES (2, 'Music', '200 Main St', 400, .15, 070000, 160000, 0, 0, 20180301, '1');
+ Insert into Parkinglot(ParkingLotID, ParkingLotName, StreetAddress,Capacity, Price, BillStartTime,BillEndTime,24HourCharge,DisableTicketing,ValidityStartDate, enabled)
+ VALUES (3, 'Towers', '500 Main St', 400, .15, 070000, 160000, 0, 0, 20180301, '1');
+
+#Parking
+#test timing
+Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
+Values(1,1, 20180314064500, 20180314121500);
+Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
+Values(1,1, 20180315144500, 20180315161500);
+Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
+Values(1,1, 20180316064500, 20180316181500);
+Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
+Values(1,1, 20180319064500, 20180320121500);
+#test multiple users
+#Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
+#Values(1,3, 20180314064500, 20180314121500);
+#Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
+#Values(1,3, 20180315144500, 20180315161500);
+#Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
+#Values(1,3, 20180316064500, 20180316181500);
+#Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
+#Values(1,3, 20180319064500, 20180320121500);
+#test multiple lots
+#Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
+#Values(1,1, 20180314064500, 20180314121500);
+#Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
+#Values(2,1, 20180315144500, 20180315161500);
+#Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
+#Values(2,1, 20180316064500, 20180316181500);
+#Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
+#Values(3,1, 20180319064500, 20180320121500);
