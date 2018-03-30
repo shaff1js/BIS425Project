@@ -24,10 +24,11 @@ ParkingLotName varchar(30),
 StreetAddress varchar(30) not null,
 Capacity int(3) not null,
 Price decimal(4,2) not null,
-BillStartTime Int(6) not null,
-BillEndTime int(6) not null,
+BillStartTime char(6) not null,
+BillEndTime char(6) not null,
 24HourCharge char(1),
 DisableTicketing char(1),
+WeekendTicketing char(1),
 Enabled char(1),
 ValidityStartDate Double,
 ValidityEndDate Double,
@@ -51,8 +52,8 @@ create table Parking(
 ParkingID bigint(12) not null auto_increment,
 ParkingLotInstanceID int(9) not null,
 UserID int(6) not null,
-CheckInTime bigint(14) not null,
-CheckOutTime bigint(14),
+CheckInTime datetime,
+CheckOutTime datetime,
 LastUpdate timestamp,
 constraint ParkingPK primary key (ParkingID),
 constraint ParkingFK1 foreign key (ParkingLotInstanceID) references ParkingLot(ParkingLotInstanceID),
@@ -76,38 +77,38 @@ INSERT INTO vehicle (make, model, year, color, licenseplate, userid, active)
 VALUES ('Chevrolet', 'Cruze', 2010, 'Black', 'FTM P2500',3,0);
 
 #Parking Lot
-Insert into Parkinglot(ParkingLotID, ParkingLotName, StreetAddress,Capacity, Price, BillStartTime,BillEndTime,24HourCharge,DisableTicketing,ValidityStartDate, Enabled)
- VALUES (1, 'Grawn', '123 Main St', 115, .2, 070000, 160000, 0, 0, 20180301, '1');
- Insert into Parkinglot(ParkingLotID, ParkingLotName, StreetAddress,Capacity, Price, BillStartTime,BillEndTime,24HourCharge,DisableTicketing,ValidityStartDate, enabled)
- VALUES (2, 'Music', '200 Main St', 400, .15, 070000, 160000, 0, 0, 20180301, '1');
- Insert into Parkinglot(ParkingLotID, ParkingLotName, StreetAddress,Capacity, Price, BillStartTime,BillEndTime,24HourCharge,DisableTicketing,ValidityStartDate, enabled)
- VALUES (3, 'Towers', '500 Main St', 400, .15, 070000, 160000, 0, 0, 20180301, '1');
+Insert into Parkinglot(ParkingLotID, ParkingLotName, StreetAddress,Capacity, Price, BillStartTime,BillEndTime,24HourCharge,DisableTicketing, WeekendTicketing,ValidityStartDate, Enabled)
+ VALUES (1, 'Grawn', '123 Main St', 115, .2, 070000, 160000, 0, 0,0, 20180301, '1');
+ Insert into Parkinglot(ParkingLotID, ParkingLotName, StreetAddress,Capacity, Price, BillStartTime,BillEndTime,24HourCharge,DisableTicketing,WeekendTicketing,ValidityStartDate, enabled)
+ VALUES (2, 'Music', '200 Main St', 400, .15, 070000, 160000, 0, 0,0, 20180301, '1');
+ Insert into Parkinglot(ParkingLotID, ParkingLotName, StreetAddress,Capacity, Price, BillStartTime,BillEndTime,24HourCharge,DisableTicketing,WeekendTicketing,ValidityStartDate, enabled)
+ VALUES (3, 'Towers', '500 Main St', 400, .15, 070000, 160000, 0, 0,0, 20180301, '1');
 
 #Parking
 #test timing
 Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
 Values(1,1, 20180314064500, 20180314121500);
 Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
-Values(1,1, 20180315144500, 20180315161500);
+Values(1,1, '2018-03-15 14:45:00', '2018-03-15 16:15:00');
 Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
-Values(1,1, 20180316064500, 20180316181500);
+Values(1,1, '2018-03-16 06:45:00', '2018-03-16 18:15:00');
 Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
-Values(1,1, 20180319064500, 20180320121500);
+Values(1,1, '2018-03-19 06:45:00', '2018-03-20 12:15:00');
 #test multiple users
-#Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
-#Values(1,3, 20180314064500, 20180314121500);
-#Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
-#Values(1,3, 20180315144500, 20180315161500);
-#Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
-#Values(1,3, 20180316064500, 20180316181500);
-#Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
-#Values(1,3, 20180319064500, 20180320121500);
+Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
+Values(1,3, 20180314064500, 20180314121500);
+Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
+Values(1,3, 20180315144500, 20180315161500);
+Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
+Values(1,3, 20180316064500, 20180316181500);
+Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
+Values(1,3, 20180319064500, 20180320121500);
 #test multiple lots
-#Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
-#Values(1,1, 20180314064500, 20180314121500);
-#Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
-#Values(2,1, 20180315144500, 20180315161500);
-#Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
-#Values(2,1, 20180316064500, 20180316181500);
-#Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
-#Values(3,1, 20180319064500, 20180320121500);
+Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
+Values(1,1, 20180314064500, 20180314121500);
+Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
+Values(2,1, 20180315144500, 20180315161500);
+Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
+Values(2,1, 20180316064500, 20180316181500);
+Insert Into Parking (ParkingLotInstanceID, UserID, CheckInTime, CheckOutTime)
+Values(3,1, 20180319064500, 20180320121500);
